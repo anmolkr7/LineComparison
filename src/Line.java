@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Line {
+public class Line implements Comparable<Line> {
     Point p1;
     Point p2;
 
@@ -23,4 +23,8 @@ public class Line {
         return (this.p1.x==other.p1.x && this.p1.y==other.p1.y && this.p2.x==other.p2.x && this.p2.y==other.p2.y);
     }
 
+    @Override
+    public int compareTo(Line other){
+        return Double.compare(this.getLength(), other.getLength());
+    }
 }
