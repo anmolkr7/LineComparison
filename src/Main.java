@@ -47,5 +47,17 @@ public class Main{
         } else {
             System.out.println("Both lines are NOT EQUAL.");
         }
+
+        //Compare lengths using compareTo()
+        int result=line1.compareTo(line2);
+        if(result==0){
+            System.out.println("Both lines are EQUAL in length.");
+        }
+        else if(result>0){
+            System.out.println("Line 1 is GREATER in length.");
+        }
+        else {
+            System.out.println("Line 1 is LESSER in length.");
+        }
     }
 }
